@@ -56,6 +56,6 @@ const importGames = async () => {
 
 importGames();
 
-// Read data from Jason file
-// Do a loop between each item
+// Read data from JSON file
+// Loop through each item
 // Save each item in the database
