@@ -43,6 +43,11 @@ module.exports = {
 
         return query.exec();
     },
+
+    findOne: (id) => {
+        return Game.findById(id);
+    },
+
     store: (data) => {
         const game = new Game(data);
         return game.save();

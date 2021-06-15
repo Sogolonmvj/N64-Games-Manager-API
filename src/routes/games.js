@@ -23,6 +23,14 @@ router.get('/', async (req, res) => {
     return res.json({ message: 'Game List ', data: result });
 });
 
+router.get('/:id', async (req, res) => {
+    const { params } = req;
+    const { id } = params;
+
+    const game = await Games.findOne(id);
+    return res.json({ message: 'Game found', data: game });
+})
+
 router.post('/', async (req, res) => {
     const { body } = req;
     const data = await Games.store(body);
